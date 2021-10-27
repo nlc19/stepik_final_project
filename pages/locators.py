@@ -4,7 +4,9 @@ from selenium.webdriver.common.by import By
 class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
+
 class LoginPageLocators:
+    LOGIN_PARAM_IN_LINK = 'login'
     LOGIN_FORM = (By.CSS_SELECTOR, ".login_form")
     LOGIN_USER = (By.CSS_SELECTOR, "#id_login-username")
     LOGIN_PASSWORD = (By.CSS_SELECTOR, "#id_login-password")
@@ -16,3 +18,14 @@ class LoginPageLocators:
     REG_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
     REG_CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
     REG_BUTTON = (By.CSS_SELECTOR, '[name="registration_submit"]')
+
+
+class ProductPageLocators:
+    PROMO_PARAM_IN_LINK = "?promo="
+    PRODUCT_NAME = (By.CSS_SELECTOR, '#content_inner h1')
+    PRODUCT_PRICE = (By.CSS_SELECTOR, '.col-sm-6.product_main .price_color')
+    ADD_TO_BASKET_BUTTON = (By.CSS_SELECTOR, '.btn.btn-add-to-basket')
+    SUCCESSFUL_ADDITION_MESSAGE = (By.CSS_SELECTOR, '.alert.alert-safe:nth-child(1) .alertinner')
+    ADDED_PRODUCT_NAME = (By.CSS_SELECTOR, '.alert.alert-safe:nth-child(1) strong')
+    TOTAL_COST_IN_BASKET_MESSAGE = (By.CSS_SELECTOR, '.alert.alert-safe:nth-child(3) .alertinner')
+    TOTAL_COST_IN_BASKET = (By.CSS_SELECTOR, '.alert:nth-child(3) strong')
