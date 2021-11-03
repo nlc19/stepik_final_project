@@ -43,7 +43,7 @@ class BasePage:
 
     def is_disappeared(self, how, what, timeout=4):
         try:
-            WebDriverWait(self.browser, timeout, 1, TimeoutException).\
+            WebDriverWait(self.browser, timeout, 1, TimeoutException). \
                 until_not(ec.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
